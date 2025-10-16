@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class QuadraticEquation {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Nhập a: ");
+        double a = scanner.nextDouble();
+        System.out.print("Nhập b: ");
+        double b = scanner.nextDouble();
+        System.out.print("Nhập c: ");
+        double c = scanner.nextDouble();
+        double delta = b * b - 4 * a * c;
+
+        if (delta < 0) {
+            System.out.print("Phương trình vô nghiệm ");
+        }else if (delta == 0) {
+            double x=-b/(2*a);
+            System.out.print("phương trình có nghiệm kép:x = " + x);
+        }else{
+            double x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            double x2 = (-b - Math.sqrt(delta)) / (2 * a);
+            System.out.println("Phương trình có hai nghiệm:");
+            System.out.println("x1 = " + x1);
+            System.out.println("x2 = " + x2);
+        }
+    }
+}
